@@ -8,7 +8,9 @@ $(document).ready(function() {
   const submittedResult       =   $("#submittedResult");
   const q = {decimal: 0, bits: ""};
   const score = {correct: 0, attempts: 0};
-  var paused = false
+  var paused = false;
+var restartCounter = false
+
 
   function init(){
     $("#score").text(`Score: 0/0`);
@@ -16,7 +18,6 @@ $(document).ready(function() {
     score.attempts = 0;
     progressBar.value = timeoutSeconds;
     progressBar.max = timeoutSeconds;
-
   }
   
   function newQuestion(){
@@ -41,15 +42,14 @@ $(document).ready(function() {
     if(timedOut){
       submittedResponse.text("Timeout");
       submittedResult.text("Incorrect");
-      return 0
+      return 0;
     }
     else{
       let response =  parseInt(responseInput.val());
       let result = response === q.decimal;
       submittedResponse.text(response);
       submittedResult.text(result ? "Correct" : "Incorrect");
-      console.log("Process Anser: " + result)
-      return result
+      return result;
     }
   }
   
@@ -64,18 +64,23 @@ $(document).ready(function() {
 
 
   function startCountdown(secondsRemaining) {
+
     setInterval(() => {
       $("#progressBar").val(secondsRemaining);
-      secondsRemaining = paused ? secondsRemaining : secondsRemaining - 1
+      secondsRemaining = paused ? secondsRemaining : secondsRemaining - 1;
+
       if(restartCounter){
-        secondsRemaining = timeoutSeconds
+        secondsRemaining = timeoutSeconds;
+        
         restartCounter = false;
       }
       if (secondsRemaining < 0) {
         secondsRemaining = timeoutSeconds;
-        processAnswer(true)
+        processAnswer(true);
         updateScore(0);
         newQuestion();
+        restartCounter = true
+      
       }
     }, 1000);
   }
@@ -83,23 +88,23 @@ $(document).ready(function() {
   
   $("#pause").click(function(e){
     e.preventDefault();
-    paused = !paused
-    $(this).text(paused ? "Resume" : "Pause")
+    paused = !paused;
+    $(this).text(paused ? "Resume" : "Pause");
 })
 
 
   function responseSubmitHandler(event) {
     event.preventDefault();
-    updateScore(processAnswer(false))
-    responseInput.val("")
+    updateScore(processAnswer(false));
+    responseInput.val("");
     paused = false;
-    restartCounter = true
-    $("#pause").text("Pause")
-    newQuestion()
+    restartCounter = true;
+    $("#pause").text("Pause");
+    newQuestion();
 
   }
 
-  $("#responseSubmit").click(responseSubmitHandler)
+  $("#responseSubmit").click(responseSubmitHandler);
 
 
   startCountdown(timeoutSeconds);
