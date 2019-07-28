@@ -3,9 +3,10 @@
 A simple binary to decimal skill tester made for network engineering students preparing for the Cisco CCNA 200-125/100-105.
 
 ## To install and run:
-* Install node and npm and git
+* Install node, npm and git
 * Open a command prompt application (preferrably git bash)
 * Enter 'git clone https://github.com/severalpens/bindec_heroku.git'
+* then 'cd bindec_heroku'
 * then 'npm install'
 * then 'npm start'
 
