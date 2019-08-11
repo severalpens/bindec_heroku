@@ -20,18 +20,18 @@
     <form class="form-signin">
         <h1 class="h3 mb-3 font-weight-normal">Binary to Decimal</h1>
         <h1 class="h4 mb-4 font-weight-normal">Skill Tester</h1>
-
-      <progress id="progressBar"></progress>
-      <br/>
-      <select id="levelSelector" selected-index="1">
-        <option>Easy</option>
-        <option>Medium</option>
-        <option>Hard</option>
-      </select>
-      <br/>
-      
+        Level: <select id="difficultyLevel">
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+        </select>
+        <br/>
+        <br/>
+        <progress id="progressBar"></progress>
+        <br/>
+        <br/>
       <button type="reset" id="pause">Pause</button>
-      <br/>
+      <br/>   
       <br/>
       <h1 id="bits" class="h3 mb-3 font-weight-normal"></h1>
       <br/>
