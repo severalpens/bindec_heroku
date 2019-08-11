@@ -6,6 +6,7 @@ $(document).ready(function() {
   const submittedDecimal      =   $("#submittedDecimal");
   const submittedResponse     =   $("#submittedResponse");
   const submittedResult       =   $("#submittedResult");
+  const selectedIndex       =   $("#levelSelector").selectedIndex;
   const q = {decimal: 0, bits: ""};
   const score = {correct: 0, attempts: 0};
   var paused = false;
@@ -21,7 +22,23 @@ var restartCounter = false
   }
   
   function newQuestion(){
-    q.decimal = Math.floor((Math.random() * 255) + 1);
+    switch (selectedIndex) {
+      case value: 0
+        q.decimal = Math.floor((Math.random() * 15) + 1);        
+        break;
+        case value: 1
+        q.decimal = Math.floor((Math.random() * 255) + 16);        
+        break;
+        case value: 2
+        q.decimal = Math.floor((Math.random() * 255) + 1);        
+        break;
+   
+      default:
+        break;
+    }
+    if(selectedIndex == 0){
+
+    }
     var rawBits = "00000000" + q.decimal.toString(2);
     q.bits = rawBits.slice(-8);
     $("#bits").text(q.bits);
