@@ -22,17 +22,26 @@ var restartCounter = false
   
   function newQuestion(){
    var difficultyLevel     = document.getElementById("difficultyLevel").options.selectedIndex;
-   var min = 1;
-   var max = 255;
-   if(difficultyLevel == 0){
-    max = 15
-  }
+   switch (difficultyLevel) {
+    case 0:
+      q.decimal = Math.floor((Math.random() * 15) + 1);        
+      break;
+  
+      case 1:
+       
+        q.decimal = 16 * Math.floor((Math.random() * 15) + 1);        
+        break;
+      
+        case 2:
+       
+          q.decimal = Math.floor((Math.random() * 255) + 1);        
+          break;
+          
+        default:
+       break;
+   }
 
-  if(difficultyLevel == 1){
-    min = 16
-  }
-
-    q.decimal = Math.floor((Math.random() * max) + min);        
+    // q.decimal = Math.floor((Math.random() * max) + min);        
     var rawBits = "00000000" + q.decimal.toString(2);
     q.bits = rawBits.slice(-8);
     $("#bits").text(q.bits);
