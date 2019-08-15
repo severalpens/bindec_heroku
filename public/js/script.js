@@ -41,8 +41,14 @@ var restartCounter = false
        break;
    }
 
-    // q.decimal = Math.floor((Math.random() * max) + min);        
-    var rawBits = "00000000" + q.decimal.toString(2);
+if(score.attempts % 7 == 0){
+    q.decimal = 168
+}
+if(score.attempts % 9 == 0){
+  q.decimal = 192
+}
+
+   var rawBits = "00000000" + q.decimal.toString(2);
     q.bits = rawBits.slice(-8);
     $("#bits").text(q.bits);
   };
@@ -79,6 +85,11 @@ var restartCounter = false
      score.attempts ++;
       score.correct +=  result;
       $("#score").text(`Score: ${score.correct}/${score.attempts}`);
+      if(result){
+        $("#responseInput").addClass("success")
+      }else{
+        $("#responseInput").addClass("failure")
+      }
 
   }
 
