@@ -86,9 +86,13 @@ if(score.attempts % 9 == 0){
       score.correct +=  result;
       $("#score").text(`Score: ${score.correct}/${score.attempts}`);
       if(result){
-        $("#responseInput").addClass("success")
+        console.log("success")
+        $("#responseInput").addClass("success");
+        $("#responseInput").removeClass("failure");
       }else{
-        $("#responseInput").addClass("failure")
+        console.log("fail")
+        $("#responseInput").addClass("failure");
+        $("#responseInput").removeClass("success");
       }
 
   }
@@ -136,7 +140,7 @@ if(score.attempts % 9 == 0){
   }
 
   $("#responseSubmit").click(responseSubmitHandler);
-
+  $("#form").su
 
   startCountdown(timeoutSeconds);
 
