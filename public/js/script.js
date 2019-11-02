@@ -42,10 +42,10 @@ var restartCounter = false
    }
 
 if(score.attempts % 7 == 0){
-    q.decimal = 168
+    q.decimal = 8//168
 }
 if(score.attempts % 9 == 0){
-  q.decimal = 192
+  q.decimal = 7//192
 }
 
    var rawBits = "00000000" + q.decimal.toString(2);
