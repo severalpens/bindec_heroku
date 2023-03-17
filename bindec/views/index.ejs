@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>bindec</title>
+    <meta name="theme-color" content="#563d7c">
+  
+    <link href="/stylesheets/styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8d37ef0496.js"></script>
+    <link id="icon" rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/0030-20e3.png">
+
+
+</style>
+  </head>
+  <body class="text-center">
+    <img src="/images/icon.svg"/>
+    <form id="form" class="bindec">
+        <h1 class="h3 mb-3 font-weight-normal">Binary to Decimal</h1>
+        <h1 class="h4 mb-4 font-weight-normal">Game</h1>
+        <div><a href="/instructions" class="h4 mb-4 font-weight-normal">Instructions</a></div>
+        <br/>
+        Level: <select id="difficultyLevel">
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+        </select>
+        <br/>
+        <br/>
+        <progress id="progressBar"></progress>
+        <br/>
+        <br/>
+      <button type="reset" id="pause">Pause</button>
+      <br/>   
+      <br/>
+      <h1 id="bits" class="h3 mb-3 font-weight-normal"></h1>
+      <br/>
+      <label for="responseInput" class="sr-only">Decimal:</label>
+      <input type="number" id="responseInput" class="form-control"   autofocus>
+      <br/>
+      <br/>
+      <button   id="responseSubmit" class="btn btn-lg btn-primary btn-block" type="submit" >Submit</button>
+      <br/>
+      <p id="score"></p>
+     <br/>
+    
+     <p class="h6 text-left">Result:</p> 
+     <br/>             
+      <table id="resultsTable" class="table text-left">
+        <thead>
+          <tr>
+           </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <th scope="row"><p>Result</p></th>
+                  <td><p id="submittedResult"  class="text-right"></p></td>
+                </tr>
+
+                <tr>
+                    <th scope="row"><p>Binary</p></th>
+                    <td><p id="submittedBinary" class="text-right"></p></td>
+                  </tr>
+                      <tr>
+              <th scope="row"><p>Decimal</p></th>
+              <td><p id="submittedDecimal"  class="text-right"></p></td>
+            </tr>
+            <tr>
+                <th scope="row"><p>Response</p></th>
+                <td><p id="submittedResponse"  class="text-right"></p></td>
+              </tr>
+                </tbody>
+        </table>
+        <a class="text-right" href="https://github.com/severalpens/bindec_heroku">source</a>
+    
+    </form>
+    <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+    <script src="js/script.js"></script>
+  </body>
+  <loom-container id="lo-engage-ext-container"><loom-shadow classname="resolved"></loom-shadow></loom-container>
+  
+  </html>
