@@ -1,0 +1,3 @@
+C:\Users\paulc\Documents\GitHub\bindec_heroku\heroku\obj\Debug\heroku.njsproj.AssemblyReference.cache
+C:\Users\paulc\Documents\GitHub\bindec_heroku\heroku\obj\Debug\heroku.njsproj.CoreCompileInputs.cache
+C:\Users\paulc\Documents\GitHub\bindec_heroku\heroku\bin\Microsoft.NodejsTools.WebRole.dll
