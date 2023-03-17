@@ -1,0 +1,6 @@
+C:\Users\paulc\source\repos\bindec-heroku\bindec-heroku\obj\Debug\bindec-heroku.njsproj.AssemblyReference.cache
+C:\Users\paulc\source\repos\bindec-heroku\bindec-heroku\obj\Debug\bindec-heroku.njsproj.CoreCompileInputs.cache
+C:\Users\paulc\source\repos\bindec-heroku\bindec-heroku\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\paulc\Documents\GitHub\bindec_heroku\bindec-heroku\obj\Debug\bindec-heroku.njsproj.AssemblyReference.cache
+C:\Users\paulc\Documents\GitHub\bindec_heroku\bindec-heroku\obj\Debug\bindec-heroku.njsproj.CoreCompileInputs.cache
+C:\Users\paulc\Documents\GitHub\bindec_heroku\bindec-heroku\bin\Microsoft.NodejsTools.WebRole.dll
